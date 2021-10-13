@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="valentino,casadidio,portfolio,developer">
+		<meta name="description" content="Portfolio de Valentino Casadidio, un desarrolador fullstack junior de Argentina.">
+		<meta name="author" content="valentino casadidio">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Valentino Casadidio</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/a0b291c5da.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+	</head>
+	
+<div id="container">
+	<body>
+		<header id="myHeader" class="p-3 bg-dark text-white sticky-top">
+			<div class="container">
+				<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+					<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+						<img src="img/c_logo.png" alt="logo" width="50em">
+					</a>
+
+					<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+						<li><a href="#home" class="nav-link px-2 text-secondary">Inicio</a></li>
+						<!-- <li><a href="#experience" class="nav-link px-2 text-white">Experiencia</a></li> -->
+						<li><a href="#tools" class="nav-link px-2 text-white">Herramientas</a></li>
+						<li><a href="#projects" class="nav-link px-2 text-white">Proyectos</a></li>
+						<li><a href="#contact" class="nav-link px-2 text-white">Contacto</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<div id="home" class="px-4 py-5 my-5 text-center">
+			<img class="d-block mx-auto mb-4" src="img/yo.jpg" alt="" width="250em">
+			<h1 class="display-5 fw-bold section-title">Valentino Casadidio</h1>
+			<div class="col-lg-6 mx-auto">
+				<p class="mb-4 section-text">Soy un desarollador Junior autodidacta. Me especializo en backend, aplicaciones de escritorio y programacion de microcontroladores. Tengo un muy buen manejo del ingles.</p>
+					<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+						<a href="#contact"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Contactame!</button></a>
+						<a href="https://www.linkedin.com/in/valendidio943/" target="BLANK"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Linkedin</button></a>
+				</div>
+			</div>
+		</div>
+
+		
+
+		<div id="tools" class="container px-4 py-2" id="featured-3">
+			<h2 class="section-title pb-2 border-bottom">Herramientas y Experiencia</h2>
+			<div class="card mb-3" style="max-width: 100%">
+				<div class="row g-0">
+					<div class="col-md-8">
+						<div class="card-body">
+							<h5 class="card-title">Programacion de Microcontroladores</h5>
+							<p class="card-text">Tengo experiencia trabajando con microcontroladores Arduino y PIC en diversos ambitos. Los mismos pueden usarse para crear una gran variedad de sistemas, incluyendo pero no limitandose a: controles de temperatura, temporizadores, alarmas, etc.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<img src="img/arduino.png" class="img-fluid rounded-start" width="80%" alt="arduino">
+					</div>
+				</div>
+			</div>
+			<div class="card mb-3" style="max-width: 100%;">
+				<div class="row g-0">
+					<div class="col-md-8">
+						<div class="card-body">
+							<h5 class="card-title">.NET Framework y SQL</h5>
+							<p class="card-text">Se crear todo tipo de aplicaciones de de escritorio con WindowsForms y .NET. Ademas se diseñar, crear y administrar bases de datos SQLServer o MySQL. Tambien tengo un manejo fluido del IDE Visual Studio.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<img src="img/dotnet.png" class="img-fluid rounded-start" width="100%" alt=".NET">
+					</div>
+				</div>
+			</div>
+
+			<div class="row ">
+				<div class="wrapper">
+					<div class="card">
+						<div class="circle">
+						<div class="bar"></div>
+						<div class="box"><span></span></div>
+						</div>
+						<div class="text">C#, C, C++</div>
+					</div>
+					<div class="card js">
+						<div class="circle">
+						<div class="bar"></div>
+						<div class="box"><span></span></div>
+						</div>
+						<div class="text">Python & JS</div>
+					</div>
+					<div class="card react">
+						<div class="circle">
+						<div class="bar"></div>
+						<div class="box"><span></span></div>
+						</div>
+						<div class="text">HTML & CSS</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<script>
+	let options = {
+		startAngle: -1.55,
+		size: 150,
+		value: 0.85,
+		fill: {gradient: ['#0076B4', '#55CAF5']}
+	}
+	$(".circle .bar").circleProgress(options).on('circle-animation-progress',
+	function(event, progress, stepValue){
+		$(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+	});
+	$(".js .bar").circleProgress({
+		value: 0.70
+	});
+	$(".react .bar").circleProgress({
+		value: 0.60
+	});
+	</script>
+
+	
+
+		<div id="projects" class="container px-4 py-2 border-bottom">
+			<h2 class="section-title pb-2 border-bottom">Proyectos</h2>
+			<p class="section-text fs-4">Estos son algunos de los proyectos que realizo como pasatiempo, puedes ver mas en mi <a href="https://github.com/ElMoha943" ><u>perfil de github</u></a>.</p>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<a href="https://github.com/ElMoha943/Dashboard" class="card" target="BLANK"><img src="img/dashboard.png"></a>
+							<div class="card-body">
+								<p class="card-text">Programa de gestión de un negocio. Ventas, Invetario y mas.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">C# SQL</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<a href="https://github.com/ElMoha943/Proyecto_PavaInsta" class="card " target="BLANK"><img src="img/pavainsta.png"></a>
+							<div class="card-body">
+								<p class="card-text">Control de temperatura programado en un microcontrolador PIC16F886.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">C</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<a href="https://github.com/ElMoha943/SortingVisualizer" class="card " target="BLANK"><img src="img/sorter.png"></a>
+							<div class="card-body">
+								<p class="card-text">Programa para visualizar distintos algoritmos de ordenamiento.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">C#</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<a href="https://github.com/ElMoha943/Panel-Ventas" class="card" target="BLANK"><img src="img/CRUDWEB.png"></a>
+							<div class="card-body">
+								<p class="card-text">Panel CRUD web para gestion de inventario + grafico de ventas. Python + Flask.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">Python HTML JS</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<a href="https://github.com/ElMoha943/LeVibore" class="card " target="BLANK"><img src="img/viborita.png"></a>
+							<div class="card-body">
+								<p class="card-text">Juego de la viborita en display serial, proyecto final de Sist. Desarollo.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">C</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<a href="https://github.com/ElMoha943/Arduino-GUI" class="card " target="BLANK"><img src="img/arduinoc.png"></a>
+							<div class="card-body">
+								<p class="card-text">Prueba de control de Arduino, conexion serial desde C#.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<small class="text-muted">C#</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id= "contact" class="container col-xl-10 col-xxl-8 px-4 py-5">
+			<div class="row align-items-center g-lg-5 py-5">
+				<div class="col-lg-7 text-center text-lg-start">
+					<h1 class="display-4 fw-bold lh-1 mb-3 section-title">¿Aun no estas convencido?</h1>
+					<p class="col-lg-10 fs-4 section-text">Te invito a llenar este pequeño formulario para ponerte en contacto conmigo y poder personalmente despejar todas tus dudas!</p>
+				</div>
+				<div class="col-md-10 mx-auto col-lg-5">
+					<form class="p-4 p-md-5 border rounded-3 bg-light">
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+							<label for="floatingInput">Email</label>
+						</div>
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" id="floatingInput" placeholder="Nombre">
+							<label for="floatingInput">Nombre</label>
+						</div>
+						<div class="form-floating mb-4">
+							<input type="text" class="form-control" id="floatingInput" placeholder="Tu mensaje aqui">
+							<label for="floatingInput">Mensaje</label>
+						</div>
+						<button class="w-100 btn btn-lg btn-primary" type="submit">Contactame!</button>
+						<hr class="my-4">
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<div class="col-md-4 d-flex align-items-center">
+				<a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+					<svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+				</a>
+				<span class="text-muted">© 2021 Casadidio Valentino.</span>
+			</div>
+			<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+				<li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+				<li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+				<li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+			</ul>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+		<script src="js/code.js"></script>
+	</body>
+</html>
