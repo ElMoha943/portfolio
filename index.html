@@ -229,20 +229,20 @@
                     <form id="contact-form">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Nombre" required>
+                                <input id="cname" type="text" placeholder="Nombre" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input id="cemail" type="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Asunto" required>
+                            <input id="csubject" type="text" placeholder="Asunto" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Mensaje.." required></textarea>
+                            <textarea id="cbody" cols="30" rows="10" placeholder="Mensaje.." required></textarea>
                         </div>
                         <div class="button-area">
-                            <a href="https://mailto:valendidio943@gmail.com" target="_top"><button type="submit">Enviar</button></a>
+                            <button type="submit" onclick="sendMail()">Enviar</button>
                         </div>
                     </form>
                 </div>
