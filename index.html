@@ -226,23 +226,24 @@
                 </div>
                 <div class="column right">
                     <div class="text">Enviame un mensaje</div>
-                    <form id="contact-form">
+                    <form action="https://formcarry.com/s/Dg8zJFbDgoN" method="POST" accept-charset="UTF-8" >
                         <div class="fields">
                             <div class="field name">
-                                <input id="cname" type="text" placeholder="Nombre" required>
+                                <input id="cname" type="text" name="firstName" placeholder="Nombre" required>
                             </div>
                             <div class="field email">
-                                <input id="cemail" type="email" placeholder="Email" required>
+                                <input id="cemail" type="email" name="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input id="csubject" type="text" placeholder="Asunto" required>
+                            <input id="csubject" type="text" name="subject" placeholder="Asunto" required>
                         </div>
                         <div class="field textarea">
-                            <textarea id="cbody" cols="30" rows="10" placeholder="Mensaje.." required></textarea>
+                            <textarea id="cbody" name="body" cols="30" rows="10" placeholder="Mensaje.." required></textarea>
                         </div>
                         <div class="button-area">
-                            <button type="submit" onclick="sendMail()">Enviar</button>
+                            <input type="hidden" name="_gotcha">
+                            <button type="submit">Enviar</button>
                         </div>
                     </form>
                 </div>
