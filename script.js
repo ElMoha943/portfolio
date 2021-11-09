@@ -77,5 +77,5 @@ function sendMail() {
     var name = document.getElementById("cname").value;
     var subject = document.getElementById("csubject").value;
 
-    window.location.replace(`mailto:hello@domain.com?body=${body}&subject= ${name} - ${subject}`);    
+    window.location.replace(`mailto:valentinodidio943@gmail.com?body=${body}&subject= ${name} - ${subject}`); 
 }
